@@ -1,7 +1,11 @@
 // Preloader
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
-  preloader.style.display = "none";
+  preloader.classList.add("hidden");
+
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 600); // Match CSS transition duration
 });
 
 // Scroll Reveal
@@ -22,6 +26,7 @@ window.addEventListener("scroll", () => {
     backToTop.style.display = "none";
   }
 });
+
 // Dark Mode Toggle
 const toggle = document.getElementById('darkModeToggle');
 toggle.addEventListener('click', () => {

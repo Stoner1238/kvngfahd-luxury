@@ -238,17 +238,27 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s ease;
 }
+
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .loader-text {
   color: #FFD700;
   font-size: 3rem;
   font-family: 'Playfair Display', serif;
   animation: blink 1.2s infinite;
 }
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.2; }
 }
+
 
 /* Sticky Navbar */
 .navbar {
